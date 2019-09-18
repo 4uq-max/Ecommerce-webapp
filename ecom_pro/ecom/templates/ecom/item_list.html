@@ -1,0 +1,14 @@
+{% extends "ecom/base.html" %}
+{% block content %}
+<h1>items</h1>
+{%for item in items%}
+    <div>
+    <p>{{ item.title }}</p>
+    <p> {{ item.price }}</p>
+    <p> {{ item.labels }}</p>
+    <p> {{ item.category }}</p>
+    </div>
+
+{% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends "ecom/base.html" %} 
+{% block content%}
+{% load crispy_forms_tags %}
+<div class="content-section w3-black">
+    <form method="POST">
+        {% csrf_token %}
+        <div class ="contaner-fluid">
+        <div class="row">
+        <div class="col-lg-6" style="padding:32px 48px;">
+      
+            <legend class="mb-4 " >Join today</legend>
+            {{ form|crispy }}
+        
+        <div class="form-btn-group">
+            <button class="btn btn-outline-info" type="submit">Sign-up</button>
+        </div>
+    </form>
+    <div class="border-top pt-3">
+        <small class='text-muted'>
+            Already have an account? <a class= "ml-2" href= "#">Sign IN</a>
+        </small>
+    </div>
+    </div>
+    <div class="col-lg-6">
+    </div>
+    </div>
+    </div>
+</div>
+{% endblock content %}

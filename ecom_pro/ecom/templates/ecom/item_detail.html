@@ -1,0 +1,18 @@
+{% extends "ecom/base.html" %}
+{% block content %}
+<h1>items</h1>
+
+    <div>
+    <p>{{ object.title }}</p>
+    <img src=" {{ object.image.url }}" >
+    <p>{{ object.description }}</p>
+    <p> {{ object.price }}</p>
+    <p> {{ object.labels }}</p>
+    <p> {{ object.category }}</p>
+    <a href = "{{ object.get_add_to_cart_url }}">add to cart</a>
+    <a href = "{{ object.get_remove_from_cart_url }}">add to cart</a>
+    </div>
+
+
+
+{% endblock content %}
